@@ -34,7 +34,7 @@ export function addFeature(req, res) {
   // Let's sanitize inputs
   newFeature.name = sanitizeHtml(newFeature.name);
 
-  newFeature.slug = slug(newFeature.title.toLowerCase(), { lowercase: true });
+  newFeature.slug = slug(newFeature.name.toLowerCase(), { lowercase: true });
   newFeature.cuid = cuid();
   newFeature.save((err, saved) => {
     if (err) {

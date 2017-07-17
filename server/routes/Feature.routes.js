@@ -10,7 +10,7 @@ router.route('/features').get(FeatureController.getFeatures);
 router.route('/features/:cuid').get(FeatureController.getFeature);
 
 // Add a new Feature
-router.route('/features').feature(FeatureController.addFeature);
+router.route('/features').post(FeatureController.addFeature);
 
 // Delete a feature by cuid
 router.route('/features/:cuid').delete(FeatureController.deleteFeature);

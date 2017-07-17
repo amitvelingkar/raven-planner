@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-const Schema = mongoose.Schema;
+import slug from 'limax';
 
-const slug = require('slugs');
+const Schema = mongoose.Schema;
 
 const FeatureSchema = new Schema({
   name: {
@@ -47,12 +47,12 @@ const FeatureSchema = new Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'Sentiment'
   },
-  */
   author: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
     required: 'you must always supply an author',
   },
+  */
 });
 
 FeatureSchema.pre('save', async function UniqueSlug(next) {

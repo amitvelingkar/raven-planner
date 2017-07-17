@@ -15,7 +15,7 @@ export function addFeature(feature) {
 
 export function addFeatureRequest(feature) {
   return (dispatch) => {
-    return callApi('features', 'feature', {
+    return callApi('features', 'post', {
       feature: {
         name: feature.name,
       },

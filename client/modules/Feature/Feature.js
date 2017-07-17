@@ -37,11 +37,13 @@ const mapStateToProps = (state) => {
     features: getFeatures(state),
   };
 };
-/*
+
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    addFeatureRequest: addFeatureRequest,
+  };
 };
-*/
+
 Feature.propTypes = {
   features: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
