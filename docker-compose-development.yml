@@ -9,7 +9,7 @@ web:
    - .:/usr/src/app/
   environment:
    NODE_ENV: development 
-   MONGO_URL: mongodb://db:27017/mern-starter
+   MONGO_URL: mongodb://velingkar:margao@ds161162.mlab.com:61162/raven-planner
 db:
   image: mongo:latest
   ports:

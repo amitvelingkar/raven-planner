@@ -39,5 +39,13 @@ export default (
         });
       }}
     />
+    <Route
+      path="/features"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Feature/Feature').default);
+        });
+      }}
+    />
   </Route>
 );
